@@ -14,4 +14,4 @@ web-build/
 .DS_Store
 package-lock.json
 package-lock
-node_modules/
+git rm --cached package-lock.json
