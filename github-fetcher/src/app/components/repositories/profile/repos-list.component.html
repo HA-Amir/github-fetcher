@@ -1,0 +1,37 @@
+  <nav class="navbar navbar-dark bg-custom-2">
+      <img
+      class="logo"
+         src="../assets/kisspng-github-computer-icons-icon-design-github-5ab8a31e5b5395.6758034915220498223741.png"
+         />
+      <h2>GitHub Fetch API For Edorer</h2>
+    </nav>
+    
+    
+    
+      <form  class="form-inline md-form form-sm mt-0">
+      
+        <div id="searchbox" class="container h-100">
+          <div class="d-flex justify-content-center h-100">
+            <div class="searchbar">
+              <input 
+              id="username"
+              [(ngModel)]="username" 
+              class="search_input" type="text"
+              name="username"
+              placeholder="Search..."
+             />
+              
+              <fa-icon (click)="Search(username)" [icon]="search" class="fasearch"></fa-icon>
+            </div>
+          </div>
+        </div>
+    
+      
+    </form>
+    
+    <div class="body">
+      <div *ngFor="let repo of repos | async" class="card">
+        <a class="one-repo" style='color: black' href={{repo.clone_url}} class="link-ref" > {{ repo.name }}</a>
+        <!-- <a style='color: black' href={{repo.clone_url}} class="link-ref">View on github</a> -->
+      </div>
+    </div>
