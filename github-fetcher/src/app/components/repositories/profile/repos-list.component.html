@@ -28,10 +28,50 @@
     
       
     </form>
-    
-    <div class="body">
-      <div *ngFor="let repo of repos | async" class="card">
-        <a class="one-repo" style='color: black' href={{repo.clone_url}} class="link-ref" > {{ repo.name }}</a>
-        <!-- <a style='color: black' href={{repo.clone_url}} class="link-ref">View on github</a> -->
+
+   <div *ngIf="test" >  
+    <div class="folowers" >
+    <a href="#" class="myButton">{{profile.followers}} Followers</a>
+    <a href="#" class="myButton">Following {{profile.following}}</a>
+    <a href="#" class="myButton">{{profile.public_gists}}  gists</a>
+    <a href="#" class="myButton">{{profile.public_repos}}  Repos</a>
+  </div>
+  
+    <div class="parent">
+      <div class="Profile">
+        <img id="ProfilePicture" class="rounded-circle z-depth-2" alt="100x100" src={{profile.avatar_url}}
+          data-holder-rendered="true">
+          <div class="data">  
+          <h4 class="username" >{{profile.name}}({{profile.login}})</h4>
+          <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github</a></p>
+          <span *ngIf="profile.company">Works at {{profile.company}} in {{profile.location}}</span>
+           
+            <p class="pst-group-item" *ngIf="profile.bio">{{profile.bio}}</p>
+            <p class="pst-group-item" *ngIf="profile.hireable">Available for hire</p>
+            <p class="pst-group-item" *ngIf="profile.blog"><a href="{{profile.blog}}" target="_blank">{{profile.blog}}</a></p>
+            <p class="list-group-item" *ngIf="profile.email"><a href="emailto:{{profile.email}}">{{profile.email}}</a></p>
+          </div>
+
       </div>
+      
+      <div class="box box-10">
+        
+        <table>
+         <div *ngFor="let repo of repos | async" class="card">
+            <tr class=" repos ">
+              <th class="githubUrl">   <p>{{repo.name}}</p></th>
+              <th><a class="btn btn-4" href={{repo.clone_url}} >More</a></th>
+              
+            </tr>
+            
+          
+          </div>
+        </table>
+        
+        
+        
+        
+      </div>
+  
     </div>
+  </div>

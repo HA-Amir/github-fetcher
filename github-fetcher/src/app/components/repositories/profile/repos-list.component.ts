@@ -22,7 +22,7 @@ export class ReposListComponent implements OnInit {
   public loading =  this.store.select((state: any) => state.repositories.loading);
   public result: any = []
   public profile:any=[]; 
-  
+  public test:any=false
 
 
   Search(username: string): void {
@@ -33,6 +33,7 @@ export class ReposListComponent implements OnInit {
       .subscribe((profile)=>{ 
         console.log(profile);
         this.profile =profile})
+        this.test=!this.test
       this.store.dispatch(FetchUserRepos({ username }));
     }
   }

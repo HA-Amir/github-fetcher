@@ -66,9 +66,118 @@
         color:white;
         text-decoration:none;
         }
-      
+        .parent {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: 1fr;
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+          margin-top:10%;
+          margin-left:2%;
+             }
+       .Profile{
+              
+               height: 100%;
+               width: 50%;
+               display: grid;
+               grid-template-columns: 1fr;
+               grid-template-rows: repeat(2, 1fr);
+               grid-column-gap: 13px;
+               grid-row-gap: 50px;
+               margin-top: -10%;
+               }
+         #ProfilePicture{
+               height: 95%;
+               width: 75%;
+               margin: 0 auto;
+               margin-top:10%;
+             }
+         /* .username{
+               margin-left: 12%;
+               margin-bottom: -30%;
+             } */
+       .box {
+             margin-left: -30%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               flex-basis: 17%;
+               height: 100%;
+               width:105%;
+               margin-bottom: 1em;
+             }
+        .box-10 {
+               border: 5px outset #13547a;
+             } 
+       .card {
+             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+             transition: 0.3s;
+             width: 420px;
+             height: 60px;
+             background-color: whitesmoke;
+             justify-content: space-between;
+             text-align: center;
+             display: flex;
+             margin-right: 6px;
+             margin-bottom: 16px;
+             margin-left: 55px;
+             }
+             
+             .card:hover {
+               box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+             }
+       .btn {
+             /* flex: 1 1 auto; */
+               text-align: center; 
+               transition: 0.5s;
+               color: white;
+               box-shadow: 0 0 20px #eee;
+               border-radius: 10px;
+               /* margin-left: 50%; */
+              
+             }
+             .btn-4 {
+              background-image: linear-gradient(15deg, #13547A 0%, #052B26 100%);
+              }
+             .githubUrl{
+                width: 98%;
+
+             }
+             .repos{
+               margin-top: 2%;
+             }
+             .myButton { 
+              margin-left: 2%;
+              box-shadow: 3px 4px 0px 0px #899599;
+              background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+              border-radius:15px;
+              border:1px solid #d6bcd6;
+              display:inline-block;
+              cursor:pointer;
+              color:black;
+              font-family:Arial;
+              font-size:17px;
+              padding:7px 25px;
+              text-decoration:none;
+              text-shadow:0px 1px 0px #e1e2ed;
+          }
+          .myButton:hover {
+              background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+              background-color:#bab1ba;
+          }
+          .myButton:active {
+              position:relative;
+              top:1px;
+          }
+          .folowers{
+            margin-left: 42%;
+            margin-bottom: -8%;
+            margin-top: 8%;
+          }
     
-    
+ .data{
+   margin:auto;
+ }   
     
     
       
